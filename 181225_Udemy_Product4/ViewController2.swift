@@ -4,6 +4,8 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     @IBOutlet weak var tableView: UITableView!
     
+    var selectedImage: UIImage?
+    
     var iconArray = ["0.png","1.jpg","2.jpg","3.jpg","4.jpg"]
     var stationArray = ["渋谷","新宿","恵比寿","代々木","高輪ゲートウェイ"]
     
@@ -26,7 +28,6 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     //各セルの要素を設定
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //CellのIDで、UITableViewCellのインスタンスを生成
@@ -49,6 +50,12 @@ class ViewController2: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+    //Cellが選択された場合に
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+            // ViewController3へ遷移するためにSegueを呼び出す
+            performSegue(withIdentifier: "next",sender: nil)
+        }
     
 }
 

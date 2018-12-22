@@ -1,9 +1,16 @@
-//
-//  ViewController3.swift
-//  181225_Udemy_Product4
-//
-//  Created by Tomohiro Fujiwara on 2018/12/22.
-//  Copyright © 2018 warafuni. All rights reserved.
-//
-
 import Foundation
+import UIKit
+
+class ViewController3: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //スワイプバック
+        let target = self.navigationController?.value(forKey: "_cachedInteractionController")
+        let recognizer = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+        self.view.addGestureRecognizer(recognizer)
+        
+    }
+    
+}

@@ -1,18 +1,15 @@
-//
-//  ViewController.swift
-//  181225_Udemy_Product4
-//
-//  Created by Tomohiro Fujiwara on 2018/12/22.
-//  Copyright © 2018 warafuni. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+    button.backgroundColor = UIColor(red:91/255, green:190/255, blue:239/255, alpha:1.0)
+    button.layer.cornerRadius = 10.0
+        
     }
 
 
